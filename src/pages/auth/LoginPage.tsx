@@ -58,7 +58,7 @@ const LoginPage = () => {
     onSubmit: async ({ value }) => {
       const res = await login(value);
       if (res) {
-        navigate("/dashboard");
+        navigate("/admin");
       }
     },
   });

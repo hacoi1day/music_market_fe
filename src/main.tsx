@@ -29,20 +29,22 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/dashboard",
+    path: "/admin",
     element: <DashboardPage />,
-  },
-  {
-    path: "/user",
-    element: <UserPage />,
-  },
-  {
-    path: "/song",
-    element: <SongPage />,
-  },
-  {
-    path: "/banner",
-    element: <BannerPage />,
+    children: [
+      {
+        path: "user",
+        element: <UserPage />,
+      },
+      {
+        path: "song",
+        element: <SongPage />,
+      },
+      {
+        path: "banner",
+        element: <BannerPage />,
+      },
+    ],
   },
 ]);
 

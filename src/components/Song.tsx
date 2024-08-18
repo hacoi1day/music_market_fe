@@ -1,11 +1,14 @@
 import styled from "styled-components";
-import song from "../assets/images/song.png";
+import songImg from "../assets/images/song.png";
+import { SongProperty } from "../classes/Song";
 
 const SongWrapper = styled.div`
-  display: flex;
+  display: block;
   margin-bottom: 60px;
+  height: 160px;
   .thumbnail {
     margin-right: 20px;
+    float: left;
 
     img {
       width: 160px;
@@ -39,15 +42,19 @@ const SongWrapper = styled.div`
   }
 `;
 
-const Song = () => {
+type SongProps = {
+  song: SongProperty;
+};
+
+const Song = ({ song }: SongProps) => {
   return (
     <SongWrapper>
       <div className="thumbnail">
-        <img src={song} alt="song" />
+        <img src={songImg} alt="song" />
       </div>
       <div className="information">
-        <h6>Bury The Light</h6>
-        <p>Casey Edwards, Victor Borba</p>
+        <h6>{song.name}</h6>
+        <p>{song.description}</p>
       </div>
     </SongWrapper>
   );
