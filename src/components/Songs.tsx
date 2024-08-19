@@ -58,7 +58,7 @@ const Songs = ({ title }: SongsProps) => {
     <SongsWrapper>
       <h2>{title}</h2>
       <hr />
-      <div className="columns-1 md:columns-2 ">
+      <div className="columns-1 md:columns-2">
         {songs.map((item, index) => (
           <Song key={index} song={item} />
         ))}
