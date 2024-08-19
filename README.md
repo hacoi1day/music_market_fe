@@ -6,7 +6,7 @@
 - [x] Create HomePage
 - [x] Create Infinity Item
 - [x] Implement API Songs
-- [] Visualization with `react-window`
+- Visualization with `react-window`
 
 ### Start
 ```
